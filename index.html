@@ -1,5 +1,10 @@
 <!DOCTYPE html>
-<!--This is for practice-->
+<!--Romaric Tchokouaha-->
+<!--CIS 155-->
+<!--Module 3-->
+<!--10/09/2025-->
+
+<!--The purpose of this webpage is to give information to CIS 155 student about the class material and tools we will need-->
 <html lang="en">
 
 <head>
@@ -7,26 +12,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="This Web page is for practice purpose on how to built a website from scratch" />
     <title>CIS155: First Project</title>
+    <link rel="stylesheet" type="text/css" href="format_1.css">
 </head>
 
 <body>
     <header>
-        <h1 id="title"><strong>CIS 155:</strong> Create Your Own Website</h1>
-        <img src="Images/Objects/Book.jpg" alt="murach's HTML and CSS 5e book" width="200px">
-        <h2> Install your IDE</h2>
-        <h3> Install the Extensions</h3>
+        <h1 id="title"><strong>CIS 155:</strong> Web Development</h1>
+        <p>The following class materials, along with instructor's recorded videos and eventually lecture sessions, will
+            help you
+            gain a clear and solid understanding of website creation.They will also make your learning experience
+            easier and better prepare you for your future career. The <strong><em> goal </em> </strong> here is to be
+            able to create your own website by the end of this
+            quarter. To reach the goal, you will need to practice a lot.
+            <br>
+            <q id="quote">I hope you will have fun doing thaking this class</q> -<strong><em>Romaric Tiemeni</em></strong>
+
+        </p>
+        <img src="Images/Objects/Book.jpg" alt="murach's HTML and CSS 5e book" width="400px">
+        <img src="Images/Objects/HTML5.jpg" alt="HTML5 Pocket Reference">
+        <img src="Images/Objects/CSS.jpg" alt="CSS Pocket Reference">
     </header>
 
     <main>
-        <p class="object">
-            The <strong><em> goal </em> </strong> here is to be able to create my own website by the end of this quarter. To reach my goal,
-            I need to practice a lot.
-        </p>
-        <p>
-            <q>I hope I will have fun doing this Project</q> -Romaric Tiemeni
-        </p>
         <section>
-            <h2>Assignments</h2>
+            <h2 class="subtitle1"> Getting Started (Orientation)</h2>
+            <p>
+                Please follow this orientation step by step to install and customize the tools we will need for this
+                course.Taking the time to set up everything properly will ensure that your learning experience runs
+                smoothly throughout the term.
+                <br>
+                In this section, you'll find detailed instructions, recommended software, and useful resources that will
+                help you get started.
+                Make sure to carefully review each step before moving on to the next one.
+                If you encounter any difficulties, don't hesitate to reach out to your instructor or check the provided
+                troubleshooting guide.
+                <br>
+                Completing this setup will allow you to practice and apply what you learn effectively, using the same
+                professional tools that are commonly used in the IT and web development industry.
+                By the end of this orientation, your environment will be fully configured and ready for hands-on
+                projects and assignments.
+            </p>
+            <h3 class="subtitle2"> Install your IDE (Visual Studio Code)</h3>
+            <p>
+                For those using Windows 11, to run Visual Studio Code on your workstation, follow these steps to install
+                and set it up:
+                <br>
+                <!--<strong> Step-by-Step Installation</strong>-->
+            <ol>
+                <li><strong>Download the installer:</strong> Visit the official <a
+                        href="https://code.visualstudio.com/"> Visual Studio Code website </a> and click on the
+                    "Download for Windows" button.</li>
+                <li><strong>Run the Installer:</strong> Locate the downloaded installer file (usually in your Downloads
+                    folder) and double-click it to start the installation process.</li>
+                <li><strong>Accept the License Agreement:</strong> Read through the license agreement, check the box to
+                    accept the terms, and click "Next".</li>
+                <li><strong>Choose Install Location:</strong> Select your desired location for the VSCode files or leave
+                    it at the default setting, then click "Next".</li>
+                <li><strong>Select Additional Tasks:</strong> Choose any additional tasks you'd like to perform, such as
+                    creating a desktop icon or adding VSCode to your PATH (recommended), then click "Next".</li>
+                <li><strong>Install:</strong>Click the "Install" button to begin the installation. This might take a few
+                    minutes.</li>
+                <li><strong>Launch VSCode:</strong>Once the installation is complete, check the "Launch Visual Studio
+                    Code" box and click "Finish" to start using VSCode immediately.</li>
+            </ol>
+            </p>
+            <h3 class="subtitle2"> Install the Extensions (HTMLHint and Live Server)</h3>
+            <p>
+                To ensure a smooth and efficient experience with Visual Studio Code (VS Code), you'll need to install a
+                few essential extensions.
+                These extensions will enhance your coding environment, make your workflow easier, and provide useful
+                tools such as
+                syntax highlighting, debugging support, and code formatting.
+                <br>
+                In addition, some of these extensions will allow you to view your webpage live in a browser as you are
+                typing,
+                giving you immediate feedback and making it easier to see how your changes affect the design and
+                functionality.
+                <br>
+                Throughout this setup guide, you'll learn which extensions are required for the course and how to
+                install and configure them properly.
+                Taking a few minutes to complete this step will greatly improve your productivity and help you get the
+                most out of your development experience.
+            <ul>
+                <li class="subtitle2">Intall HTMLHint</li>
+                To install the HTMLHint extension in Visual Studio Code, follow these steps:
+                <ol>
+                    <li>Open Visual Studio Code and go to the Extensions view.</li>
+                    <li>Search for "HTMLHint" in the Extensions Marketplace.</li>
+                    <li>Click on the Install button next to the HTMLHint extension.</li>
+                    <li>Once installed, you can access the HTMLHint extension by clicking on the Extensions view icon in
+                        the Activity Bar or by using the View: Extensions command (⇧⌘X).</li>
+                </ol>
+                <li class="subtitle2">Install Live Server</li>
+                The Live Server extension in Visual Studio Code is a powerful tool for web developers. It creates a
+                local development server with live reload functionality,
+                allowing you to see changes in your HTML, CSS, or JavaScript files instantly in the browser without
+                manual refreshing.
+                <ol>
+                    <li>Open Visual Studio Code</li>
+                    <li>Go to the Extensions Panel by clicking the Extensions icon on the sidebar or pressing
+                        Ctrl+Shift+X (Windows/Linux) or Cmd+Shift+X (Mac).</li>
+                    <li>Search for "Live Server" by Ritwick Dey and click Install.</li>
+                    <li>Please watch this<a href="https://www.youtube.com/watch?v=WdLYGfEEoiA">video</a> to see how to
+                        use live server. </li>
+                </ol>
+            </ul>
+            <h3 class="subtitle2">Create a GitHub Account</h3>
+            <p>
+                There is no chapter in the textbook on version control! Read the following articles instead:
+                <br>
+            <ul>
+                <li><a href="https://www.atlassian.com/git/tutorials/what-is-version-control">What is Version
+                        Control</a></li>
+                <li><a href="https://content.red-badger.com/resources/what-is-git-and-github">What is Git and
+                        GitHub?</a></li>
+                <li><a href="how to create a Github account">Create your GitHub account</a></li>
+                <li><a href="https://www.youtube.com/watch?v=9GKpbI1siow">Git Tutorial Part 1: What is Version
+                        Control</a></li>
+            </ul>
+            </p>
+            <h3 class="subtitle2">Install GitHub Desktop</h3>
+                Please watch this video to see <a
+                href="https://www.bing.com/videos/riverview/relatedvideo?q=how+to+install+github+desktop+on+windows+11&mid=5F5D75F79068711FE3DF5F5D75F79068711FE3DF&FORM=VIRE&ajaxhist=0&ajaxserp=0">how
+                to install Github desktop</a>
+            </p>
+        </section>
+        <section>
+            <h2 class="subtitle1">Assignments</h2>
             <p>Explain the Assignments...</p>
             <ul>
                 <li>Create your Own Website assignments</li>
@@ -34,8 +146,9 @@
             </ul>
         </section>
         <section>
-            <h2>Final Project</h2>
-            <p>You can find the requirements for the final project <a href="https://olympic.instructure.com/courses/2635322/assignments/37759909">here</a>.</p>
+            <h2 class="subtitle1">Final Project</h2>
+            <p>You can find the requirements for the final project <a
+                    href="https://olympic.instructure.com/courses/2635322/assignments/37759909">here.</a></p>
             <ul>
                 <li>Web accessibility</li>
                 <li>Responsive web design</li>
@@ -44,7 +157,7 @@
             </ul>
         </section>
         <section>
-            <h2> How to push to GitHub</h2>
+            <h2 class="subtitle1"> How to push to GitHub</h2>
             <ol>
                 <li>git add .</li>
                 <li>git commit -m "meassage"</li>
@@ -52,10 +165,8 @@
             </ol>
         </section>
     </main>
-    <footer>
-        &copy; Romaric Tiemeni 2025
-    </footer>
-
 </body>
-
+<footer>
+    &copy; Romaric Tiemeni 2025
+</footer>
 </html>

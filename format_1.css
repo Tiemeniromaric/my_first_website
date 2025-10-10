@@ -2,8 +2,44 @@ body {
     background-color: azure;
 }
 #title{
-    font-weight: 200;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    color: navy;
 }
-.object{
-    color: black;
+.subtitle1{
+    font-weight: 600;
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: navy;
+}
+.subtitle2{
+    font-weight: 600;
+    font-size: 1.1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: navy;
+}
+img {
+    width: 150px;
+    image-rendering: auto;
+}
+p{
+    text-indent: 2em;
+    text-align: justify;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ol{
+    text-align: justify;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+ul{
+    text-align: justify;
+    line-height: 1.5;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#quote{
+    color: rgb(224, 68, 12);
+
 }
