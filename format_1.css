@@ -18,6 +18,11 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: navy;
 }
+#i1{
+    width: 450px;
+    image-rendering: auto;
+    float: left;
+}
 img {
     width: 300px;
     image-rendering: auto;
