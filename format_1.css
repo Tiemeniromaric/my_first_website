@@ -1,50 +1,69 @@
 body {
     background-color: azure;
 }
+a{
+    display: inline-block;
+    text-decoration: none;
+    transition: 0.3s ease;
+
+}
+a:hover{
+    transform: scale(1.1);
+}
+a:visited{
+    color: green;
+}
 #title{
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
     color: navy;
 }
+#section1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+#img1{
+    width: 400px;
+    height: auto;
+    image-rendering: auto;
+    /*float: left;*/
+}
+p.p1{
+    line-height: 1.7em;
+    text-indent: 0em;
+    flex: 1;
+}
 .subtitle1{
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     color: navy;
 }
 .subtitle2{
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1.1em;
     font-family: Arial, Helvetica, sans-serif;
     color: navy;
 }
-#i1{
-    width: 450px;
-    image-rendering: auto;
-    float: left;
-}
+
 img {
     width: 300px;
+    height: auto;
     image-rendering: auto;
 }
 p{
     text-indent: 2em;
     text-align: justify;
-    line-height: 1.5;
+    line-height: 1.6;
     font-family: Arial, Helvetica, sans-serif;
 }
-ol{
-    text-align: justify;
-    line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-ul{
+main li{
     text-align: justify;
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
 }
-#quote{
+q{
     color: rgb(224, 68, 12);
 
 }
