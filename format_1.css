@@ -18,61 +18,13 @@ a:visited{
     font-family: Arial, Helvetica, sans-serif;
     color: #000080;
 }
-
-
 #section1{
-    background-color: #e0440c;
-    width: 55%;
-    border: 5px dotted lch(7.39% 51.22 307.15);
-    margin: 1em;
-    padding: 1.5em 2em;
     display: flex;
     align-items: center;
     gap: 20px;
 }
-#section2{
-    float: left;
-    background-color: #7fffd4;
-    width: 55%;
-    margin: 2em;
-    padding: 1em 2em ;
-    border: thick outset hsl(120, 7%, 6%);
-
-}
-#div1{
-    /*background-color: #8b008b;*/
-    background:#8b008b url("Images/Cameroon/Animals/Waza-lion.jpg") top right repeat-y;
-    margin: 2em;
-    padding: 1em 2em;
-    border: 4px dotted #0000ff;
-}
-#div2{
-    float: left;
-    background-color: #808080;
-    width: 30%;
-    margin: 0em 1em;
-    padding: 1em 1em;
-    border: 2px dotted hsl(141, 100%, 50%);
-    border-radius: 0px 20px 30px 15px;
-
-}
-#div3{
-    background: linear-gradiant(45deg, rgb(133, 4, 4) 0%, yellow 100%);
-    margin: auto;
-    padding: 0.5em 0.5em;
-}
-
-#special{
-    clear: both;
-}
-
-
-
-
-
-
 #img1{
-    width: 300px;
+    width: 400px;
     height: auto;
     image-rendering: auto;
     /*float: left;*/
