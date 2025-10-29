@@ -1,5 +1,5 @@
 body {
-    background-color: #f0ffff;
+    background-color: azure;
 }
 a{
     display: inline-block;
@@ -16,7 +16,7 @@ a:visited{
 #title{
     font-weight: 800;
     font-family: Arial, Helvetica, sans-serif;
-    color: #000080;
+    color: navy;
 }
 #section1{
     display: flex;
@@ -35,16 +35,16 @@ p.p1{
     flex: 1;
 }
 .subtitle1{
-    font-weight: bolder;
+    font-weight: 800;
     font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
-    color: #000080;
+    color: navy;
 }
 .subtitle2{
-    font-weight: bolder;
+    font-weight: 800;
     font-size: 1.1em;
     font-family: Arial, Helvetica, sans-serif;
-    color: #000080;
+    color: navy;
 }
 
 img {
@@ -64,9 +64,9 @@ main li{
     font-family: Arial, Helvetica, sans-serif;
 }
 q{
-    color: #e0440c;
+    color: rgb(224, 68, 12);
 
 }
 footer{
-    color: #025002;
+    color: rgb(2, 80, 2);
 }
