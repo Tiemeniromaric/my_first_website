@@ -1,6 +1,12 @@
 body {
     background-color: azure;
 }
+
+/*links*/
+.clear{
+    clear: left;
+}
+
 a{
     display: inline-block;
     text-decoration: none;
@@ -8,31 +14,20 @@ a{
 
 }
 a:hover{
-    transform: scale(1.1);
+    transform: scale(1.11);
 }
 a:visited{
     color: green;
 }
+
+/*Page's Titles and subtitles*/
 #title{
     font-weight: 800;
+    font-size: 1.5em;
     font-family: Arial, Helvetica, sans-serif;
     color: navy;
-}
-#section1{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-#img1{
-    width: 400px;
-    height: auto;
-    image-rendering: auto;
-    /*float: left;*/
-}
-p.p1{
-    line-height: 1.7em;
-    text-indent: 0em;
-    flex: 1;
+    clear: left;
+
 }
 .subtitle1{
     font-weight: 800;
@@ -47,13 +42,58 @@ p.p1{
     color: navy;
 }
 
+/*body sections*/
+#section1{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.section2{
+    margin-top: 2em;
+    padding-left: 1em;
+    float: left;
+    width: 70%;
+}
+.section3{
+    margin-top: 0em;
+    float: left;
+    width: 70%;
+    padding-left: 1em;
+}
+
+/*images*/
+#img1{
+    width: 400px;
+    height: auto;
+    image-rendering: auto;
+    /*float: left;*/
+}
+#image_fang {
+    float: left;
+    width: 25%;
+    height: auto;
+    image-rendering: auto;
+}
+.image_gf1 {
+    float: left;
+    width: 25%;
+    height: auto;
+    image-rendering: auto;
+}
 img {
     width: 300px;
     height: auto;
     image-rendering: auto;
 }
+
+/*Paragraphs*/
+p.p1{
+    line-height: 1.7em;
+    text-indent: 0em;
+    flex: 1;
+}
 p{
-    text-indent: 2em;
+    /*text-indent: 2em;*/
     text-align: justify;
     line-height: 1.6;
     font-family: Arial, Helvetica, sans-serif;
@@ -70,3 +110,31 @@ q{
 footer{
     color: rgb(2, 80, 2);
 }
+
+/*Navigation menu*/
+#nav_menu{
+    padding-bottom: 3em;
+    padding-left: 0;
+    margin: auto;
+    width: 800;
+
+}
+
+#nav_menu ul{
+list-style-type: none;
+
+}
+#nav_menu ul li{ float: left;}
+#nav_menu ul li a{
+    text-align: center;
+    display: block;
+    width: 150px;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #2e552e;
+    color: white;
+    font-weight: bold;
+    border-right: 2px solid white;
+}
+#nav_menu ul li a:hover{background-color:#334812}
+#nav_menu ul li a.lastitem{border-right: none;}
