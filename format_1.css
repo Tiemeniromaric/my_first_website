@@ -1,81 +1,90 @@
+/*==================================================
+    CAMEROON WEBSITE MAIN STYLESHEET
+    Author: Romaric Tchokouaha
+    Purpose: Page layout, navigation, responsive design
+    Notes: Flexbox used for responsiveness instead of floats
+==================================================*/
+
+
+/*--------------------------------------
+    GLOBAL PAGE STYLES
+--------------------------------------*/
 body {
-    background-color: azure;
-    width: 90%;
-    padding: 0em 5em;
+    background-color: azure;       /* page background color */
+    width: 90%;                    /* limit content width */
+    padding: 0em 5em;              /* center content within body */
     justify-content: center;
-}
-#title {
-    font-weight: 800;
-    font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
-    color: black;
-    clear: left;
-    padding-left: 0em;
-
+    font-family: Arial, Helvetica, sans-serif; /* consistent typography */
 }
 
-/*This section is to set up link's look and behavior*/
+/* Utility class to clear floats (for legacy support) */
 .clear {
     clear: left;
 }
+
+
+/*--------------------------------------
+    LINK STYLES
+--------------------------------------*/
 a {
     display: inline-block;
     text-decoration: none;
-    transition: 0.3s ease;
+    transition: 0.3s ease;         /* smooth hover effects */
+}
 
-}
-a:hover {
-    transform: scale(1.11);
-}
 a:visited {
-    color: purple;
+    color: purple;                 /* color for visited links */
 }
 
-/*Page's Titles and subtitles*/
+
+/*--------------------------------------
+    TITLES & SUBTITLES
+--------------------------------------*/
 .subtitle {
     font-weight: 800;
     font-size: 1.5em;
-    font-family: Arial, Helvetica, sans-serif;
     color: black;
     padding: 0em 3em 0em 0em;
 }
 
-/*body sections*/
+
+/*--------------------------------------
+    SECTION 1 – FLEXIBLE IMAGE AND TEXT
+    Image (flag) and info paragraph side-by-side on large screens,
+    stacked vertically on smaller screens.
+--------------------------------------*/
 #section1 {
+    display: flex;                 /* enables flexbox layout */
+    flex-direction: row;           /* side by side by default */
+    justify-content: flex-start;   /* align items from left */
+    align-items: flex-start;       /* align to the top */
+    gap: 2em;                      /* space between image and text */
     width: 100%;
-    padding: 0em 1em;
-    margin-right: 3em;
-}
-.section3 {
-    width: 100%;
-    margin-top: 0em;
-    padding-left: 0em;
+    padding: 2em 1em;
+    box-sizing: border-box;
 }
 
-/*This part is to format the images*/
-.img1 {
-    float: left;
-    width: 30%;
-    min-width: 180px;
-    padding: 0em 3em 0em 0em;
+/* Image inside section (flag) */
+#img1 {
+    width: 30%;                    /* takes 30% of the container width */
+    min-width: 200px;              /* minimum image width */
     height: auto;
-    image-rendering: auto;
-    
+    image-rendering: auto;         /* smooth rendering for scaled images */
 }
-.image_fang {
-    /*float: left;*/
-    width: 25%;
-    min-width: 300px;
-    height: auto;
-    image-rendering: auto;
+
+/* Paragraph inside section (country info) */
+p.p1 {
+    flex: 1;                       /* take up remaining space beside image */
+    margin: 0;
+    padding-top: 2em;
+    line-height: 1.7em;
+    text-align: left;
 }
-.image_gf1 {
-    /*float: left;*/
-    width: 25%;
-    min-width: 300px;
-    height: auto;
-    image-rendering: auto;
-}
+
+
+/*--------------------------------------
+    IMAGE STYLES
+--------------------------------------*/
 img {
     width: 20%;
     min-width: 300px;
@@ -83,87 +92,217 @@ img {
     image-rendering: auto;
 }
 
-/*This section is to format Paragraphs*/
-p.p1{
-    float: left;
-    margin: 0em;
-    padding:0em;
-    line-height: 1.7em;
-    text-indent: 0em;
-    /*flex: 1;*/
-} 
-#clear{
-    clear: both;
+/* Specific images for cultural pages */
+.image_fang,
+.image_gf1 {
+    width: 25%;
+    min-width: 200px;
+    height: auto;
+    image-rendering: auto;
 }
+
+/* Museum image layout */
+.museum {
+    width: 25%;
+    min-width: 300px;
+    height: 200px;
+    image-rendering: auto;
+}
+
+
+/*--------------------------------------
+    PARAGRAPH STYLES
+--------------------------------------*/
 p {
     padding-right: 3em;
-    text-align: justify;
+    text-align: left;
     line-height: 1.6;
-    font-family: Arial, Helvetica, sans-serif;
     justify-content: center;
     align-items: center;
 }
 
+/* List formatting in main content */
 main li {
     text-align: justify;
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-q {
-    color: rgb(224, 68, 12);
-
-}
-
+/* Footer text color */
 footer {
-    color: rgb(2, 80, 2);
+    color: hsl(258, 89%, 25%);
 }
 
-/*This section is to configurate the navigation menu*/
+
+/*--------------------------------------
+    NAVIGATION MENU AND DROPDOWNS
+    Horizontal navigation with hover dropdown for "Culture"
+--------------------------------------*/
 #nav_menu {
     padding-bottom: 3em;
-    padding-left: 0;
     margin: auto;
     width: 100%;
-
 }
+
+/* Remove bullets and default spacing */
 #nav_menu ul {
     list-style-type: none;
     padding: 0;
-
+    margin: 0;
 }
+
+/* Main menu items */
 #nav_menu ul li {
     float: left;
     width: 25%;
+    position: relative; /* needed for submenu positioning */
 }
+
+/* Menu link styling */
 #nav_menu ul li a {
     text-align: center;
     display: block;
     padding: 1em 0;
-    text-decoration: none;
     background-color: #2e552e;
     color: white;
     font-weight: bold;
     border-right: 2px solid white;
-}
-#nav_menu ul li a:hover {
-    background-color: #334812
+    transition: background-color 0.3s ease;
 }
 
+/* Hover effect */
+#nav_menu ul li a:hover {
+    background-color: #334812;
+    border-right: none;
+}
+
+/* Remove border on the last menu item */
 #nav_menu ul li a.lastitem {
     border-right: none;
 }
 
-/*This sesion is to set up the media queries*/
+
+/*--------------------------------------
+    DROPDOWN MENU STYLES
+--------------------------------------*/
+/* Hide dropdowns by default */
+#nav_menu ul ul {
+    display: none;
+    position: absolute; /* appears below parent menu item */
+    top: 100%;
+    left: 0;
+    background-color: #2e552e;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Each submenu item takes full width */
+#nav_menu ul ul li {
+    float: none;
+    width: 100%;
+}
+
+/* Show dropdown on hover */
+#nav_menu ul li:hover > ul {
+    display: block;
+}
+
+/* Dropdown link hover color */
+#nav_menu ul ul li a:hover {
+    background-color: #446b2e;
+}
+
+
+/*--------------------------------------
+    RESPONSIVE DESIGN – MEDIA QUERIES
+--------------------------------------*/
+
+/* Medium screens (tablets, max 740px)
+   - Stack image and text vertically
+   - Center items
+*/
+@media only screen and (max-width: 740px) {
+    #section1 {
+        flex-direction: column;    /* stack vertically */
+        align-items: center;       /* center horizontally */
+        padding: 1em;
+        gap: 1.5em;
+    }
+
+    #img1 {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    p.p1 {
+        width: 100%;
+        text-align: center;
+        padding-top: 0;
+    }
+}
+
+/* Small screens (mobile phones, max 565px)
+   - Stack navigation items vertically
+   - Adjust dropdown display
+*/
 @media only screen and (max-width: 565px) {
     #nav_menu ul li {
         float: none;
         width: 100%;
-    }
-
-    #nav_menu ul li {
         border-right: none;
         border-bottom: 2px solid white;
+        position: relative;
+    }
 
+    #nav_menu ul ul {
+        position: static;
+        width: 100%;
+        display: none;
+    }
+
+    /* Allow tap or hover to reveal dropdown */
+    #nav_menu ul li:focus-within > ul,
+    #nav_menu ul li:hover > ul {
+        display: block;
+    }
+
+    #nav_menu ul li a {
+        padding: 0.8em 0;
+        font-size: 1em;
+    }
+
+    #nav_menu ul ul li a {
+        padding-left: 1em;
+    }
+}
+
+/* Extra small screens (max 360px)
+   - Compact layout and font size adjustments
+*/
+@media only screen and (max-width: 360px) {
+    body {
+        width: 95%;
+        padding: 0 2em;
+    }
+
+    #img1,
+    .image_fang,
+    .image_gf1 {
+        width: 90%;
+        max-width: 250px;
+    }
+
+    p.p1 {
+        text-align: left;
+        line-height: 1.5em;
+        font-size: 0.9em; /* smaller text for readability */
+    }
+
+    #nav_menu ul li a {
+        font-size: 0.9em;
+        padding: 0.6em 0;
+    }
+
+    #nav_menu ul ul li a {
+        padding-left: 0.5em;
     }
 }
