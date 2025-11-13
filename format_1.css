@@ -3,6 +3,7 @@
     Author: Romaric Tchokouaha
     Purpose: Page layout, navigation, responsive design
     Notes: Flexbox used for responsiveness instead of floats
+           Images updated to display correctly on mobile
 ==================================================*/
 
 
@@ -17,7 +18,7 @@ body {
     font-family: Arial, Helvetica, sans-serif; /* consistent typography */
 }
 
-/* Utility class to clear floats (for legacy support) */
+/* Utility class to clear floats (legacy support) */
 .clear {
     clear: left;
 }
@@ -33,7 +34,7 @@ a {
 }
 
 a:visited {
-    color: purple;                 /* color for visited links */
+    color: purple;
 }
 
 
@@ -49,32 +50,33 @@ a:visited {
 
 
 /*--------------------------------------
-    SECTION 1 – FLEXIBLE IMAGE AND TEXT
-    Image (flag) and info paragraph side-by-side on large screens,
-    stacked vertically on smaller screens.
+    SECTION 1 – FLEXIBLE IMAGE + TEXT
+    Side-by-side on large screens.
+    Stacks vertically on smaller screens.
 --------------------------------------*/
 #section1 {
-    display: flex;                 /* enables flexbox layout */
-    flex-direction: row;           /* side by side by default */
+    display: flex;                 /* enable flexible layout */
+    flex-direction: row;           /* horizontal alignment */
+    flex-wrap: wrap;               /* prevents items from disappearing on small screens */
     justify-content: flex-start;   /* align items from left */
-    align-items: flex-start;       /* align to the top */
-    gap: 2em;                      /* space between image and text */
+    align-items: flex-start;       /* align items at the top */
+    gap: 2em;                      /* spacing between image and text */
     width: 100%;
     padding: 2em 1em;
     box-sizing: border-box;
 }
 
-/* Image inside section (flag) */
+/* Image inside section */
 #img1 {
-    width: 30%;                    /* takes 30% of the container width */
-    min-width: 200px;              /* minimum image width */
+    width: 100%;
+    max-width: 300px;              /* keeps image manageable */
     height: auto;
-    image-rendering: auto;         /* smooth rendering for scaled images */
+    image-rendering: auto;
 }
 
-/* Paragraph inside section (country info) */
+/* Paragraph inside section */
 p.p1 {
-    flex: 1;                       /* take up remaining space beside image */
+    flex: 1;                       /* take remaining space beside image */
     margin: 0;
     padding-top: 2em;
     line-height: 1.7em;
@@ -83,30 +85,32 @@ p.p1 {
 
 
 /*--------------------------------------
-    IMAGE STYLES
+    GLOBAL IMAGE STYLES
+    Updated to fix images NOT appearing on phones.
+    Ensures images resize safely on smaller screens.
 --------------------------------------*/
 img {
-    width: 20%;
-    min-width: 300px;
+    width: 100%;                   /* fully responsive */
+    max-width: 300px;              /* prevents huge desktop images */
     height: auto;
     image-rendering: auto;
 }
 
-/* Specific images for cultural pages */
+/* Specific cultural images */
 .image_fang,
 .image_gf1 {
-    width: 25%;
-    min-width: 200px;
+    width: 100%;
+    max-width: 300px;
     height: auto;
     image-rendering: auto;
 }
 
-/* Museum image layout */
+/* Museum image */
 .museum {
-    width: 25%;
-    min-width: 300px;
+    width: 100%;
+    max-width: 300px;
     height: 200px;
-    image-rendering: auto;
+    object-fit: cover;
 }
 
 
@@ -121,21 +125,26 @@ p {
     align-items: center;
 }
 
-/* List formatting in main content */
+
+/*--------------------------------------
+    LIST STYLE
+--------------------------------------*/
 main li {
     text-align: justify;
     line-height: 1.5;
 }
 
-/* Footer text color */
+
+/*--------------------------------------
+    FOOTER STYLES
+--------------------------------------*/
 footer {
     color: hsl(258, 89%, 25%);
 }
 
 
 /*--------------------------------------
-    NAVIGATION MENU AND DROPDOWNS
-    Horizontal navigation with hover dropdown for "Culture"
+    NAVIGATION MENU & DROPDOWNS
 --------------------------------------*/
 #nav_menu {
     padding-bottom: 3em;
@@ -143,7 +152,7 @@ footer {
     width: 100%;
 }
 
-/* Remove bullets and default spacing */
+/* Remove default list styling */
 #nav_menu ul {
     list-style-type: none;
     padding: 0;
@@ -154,10 +163,10 @@ footer {
 #nav_menu ul li {
     float: left;
     width: 25%;
-    position: relative; /* needed for submenu positioning */
+    position: relative; /* required for dropdown */
 }
 
-/* Menu link styling */
+/* Menu link appearance */
 #nav_menu ul li a {
     text-align: center;
     display: block;
@@ -175,38 +184,36 @@ footer {
     border-right: none;
 }
 
-/* Remove border on the last menu item */
+/* Remove right border for last menu item */
 #nav_menu ul li a.lastitem {
     border-right: none;
 }
 
 
 /*--------------------------------------
-    DROPDOWN MENU STYLES
+    DROPDOWN MENU
 --------------------------------------*/
-/* Hide dropdowns by default */
 #nav_menu ul ul {
     display: none;
-    position: absolute; /* appears below parent menu item */
-    top: 100%;
+    position: absolute;
+    top: 100%;                /* appears under parent menu item */
     left: 0;
     background-color: #2e552e;
     width: 100%;
     z-index: 1000;
 }
 
-/* Each submenu item takes full width */
+/* Each dropdown item full width */
 #nav_menu ul ul li {
     float: none;
     width: 100%;
 }
 
-/* Show dropdown on hover */
+/* Show dropdown on hover/tap */
 #nav_menu ul li:hover > ul {
     display: block;
 }
 
-/* Dropdown link hover color */
 #nav_menu ul ul li a:hover {
     background-color: #446b2e;
 }
@@ -216,50 +223,49 @@ footer {
     RESPONSIVE DESIGN – MEDIA QUERIES
 --------------------------------------*/
 
-/* Medium screens (tablets, max 740px)
-   - Stack image and text vertically
-   - Center items
-*/
+/* Tablets & medium screens (max 740px) */
 @media only screen and (max-width: 740px) {
     #section1 {
         flex-direction: column;    /* stack vertically */
-        align-items: center;       /* center horizontally */
+        align-items: center;       /* center items */
         padding: 1em;
         gap: 1.5em;
     }
 
-    #img1 {
-        width: 80%;
+    #img1,
+    .image_fang,
+    .image_gf1 {
+        width: 90%;
         max-width: 300px;
     }
 
     p.p1 {
         width: 100%;
-        text-align: center;
+        text-align: left;
         padding-top: 0;
     }
 }
 
-/* Small screens (mobile phones, max 565px)
-   - Stack navigation items vertically
-   - Adjust dropdown display
-*/
+
+/* Mobile (max 565px) */
 @media only screen and (max-width: 565px) {
+
+    /* Make nav vertical */
     #nav_menu ul li {
         float: none;
         width: 100%;
         border-right: none;
         border-bottom: 2px solid white;
-        position: relative;
     }
 
+    /* Dropdown adapts to vertical flow */
     #nav_menu ul ul {
         position: static;
         width: 100%;
         display: none;
     }
 
-    /* Allow tap or hover to reveal dropdown */
+    /* Tap or hover to reveal submenu */
     #nav_menu ul li:focus-within > ul,
     #nav_menu ul li:hover > ul {
         display: block;
@@ -275,9 +281,8 @@ footer {
     }
 }
 
-/* Extra small screens (max 360px)
-   - Compact layout and font size adjustments
-*/
+
+/* Extra-small screens (max 360px) */
 @media only screen and (max-width: 360px) {
     body {
         width: 95%;
@@ -294,7 +299,7 @@ footer {
     p.p1 {
         text-align: left;
         line-height: 1.5em;
-        font-size: 0.9em; /* smaller text for readability */
+        font-size: 0.9em;
     }
 
     #nav_menu ul li a {
