@@ -11,11 +11,15 @@
     GLOBAL PAGE STYLES
 --------------------------------------*/
 body {
-    background-color: azure;       /* page background color */
-    width: 90%;                    /* limit content width */
-    padding: 0em 5em;              /* center content within body */
+    background-color: azure;
+    /* page background color */
+    width: 90%;
+    /* limit content width */
+    padding: 0em 5em;
+    /* center content within body */
     justify-content: center;
-    font-family: Arial, Helvetica, sans-serif; /* consistent typography */
+    font-family: Arial, Helvetica, sans-serif;
+    /* consistent typography */
 }
 
 /* Utility class to clear floats (legacy support) */
@@ -30,7 +34,8 @@ body {
 a {
     display: inline-block;
     text-decoration: none;
-    transition: 0.3s ease;         /* smooth hover effects */
+    transition: 0.3s ease;
+    /* smooth hover effects */
 }
 
 a:visited {
@@ -55,12 +60,18 @@ a:visited {
     Stacks vertically on smaller screens.
 --------------------------------------*/
 #section1 {
-    display: flex;                 /* enable flexible layout */
-    flex-direction: row;           /* horizontal alignment */
-    flex-wrap: wrap;               /* prevents items from disappearing on small screens */
-    justify-content: flex-start;   /* align items from left */
-    align-items: flex-start;       /* align items at the top */
-    gap: 2em;                      /* spacing between image and text */
+    display: flex;
+    /* enable flexible layout */
+    flex-direction: row;
+    /* horizontal alignment */
+    flex-wrap: wrap;
+    /* prevents items from disappearing on small screens */
+    justify-content: flex-start;
+    /* align items from left */
+    align-items: flex-start;
+    /* align items at the top */
+    gap: 2em;
+    /* spacing between image and text */
     width: 100%;
     padding: 2em 1em;
     box-sizing: border-box;
@@ -69,16 +80,18 @@ a:visited {
 /* Image inside section */
 #img1 {
     width: 100%;
-    max-width: 300px;              /* keeps image manageable */
+    max-width: 300px;
+    /* keeps image manageable */
     height: auto;
     image-rendering: auto;
 }
 
 /* Paragraph inside section */
 p.p1 {
-    flex: 1;                       /* take remaining space beside image */
+    flex: 1;
+    /* take remaining space beside image */
     margin: 0;
-    padding-top: 2em;
+    padding-top: 0em;
     line-height: 1.7em;
     text-align: left;
 }
@@ -90,8 +103,10 @@ p.p1 {
     Ensures images resize safely on smaller screens.
 --------------------------------------*/
 img {
-    width: 100%;                   /* fully responsive */
-    max-width: 300px;              /* prevents huge desktop images */
+    width: 100%;
+    /* fully responsive */
+    max-width: 300px;
+    /* prevents huge desktop images */
     height: auto;
     image-rendering: auto;
 }
@@ -113,10 +128,54 @@ img {
     object-fit: cover;
 }
 
+/*--------------------------------------
+    Grid 
+--------------------------------------*/
+/* Main grid container */
+#main1 {
+    width: 100%;
+    padding: 1em 0;
+    display: grid;
+
+    /* 3 columns on desktop */
+    grid-template-columns: repeat(3, 200px);
+
+    /* 2 rows of equal height (auto adjusts with content) */
+    grid-auto-rows: 150px;
+
+    gap: 20px;
+    justify-content: center;
+    /* center the grid on the page */
+}
+
+/* Each dish card */
+.div1 {
+    background-color: black;
+    color: rgb(2, 31, 11);
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+/* Images inside each card */
+.div1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* makes images fit nicely */
+    border-radius: 6px;
+}
+
+/* Captions */
+.div1 figcaption {
+    margin-top: 8px;
+    font-size: 0.95em;
+}
 
 /*--------------------------------------
     PARAGRAPH STYLES
 --------------------------------------*/
+
 p {
     padding-right: 3em;
     text-align: left;
@@ -125,7 +184,6 @@ p {
     align-items: center;
 }
 
-
 /*--------------------------------------
     LIST STYLE
 --------------------------------------*/
@@ -133,7 +191,6 @@ main li {
     text-align: justify;
     line-height: 1.5;
 }
-
 
 /*--------------------------------------
     FOOTER STYLES
@@ -163,7 +220,8 @@ footer {
 #nav_menu ul li {
     float: left;
     width: 25%;
-    position: relative; /* required for dropdown */
+    position: relative;
+    /* required for dropdown */
 }
 
 /* Menu link appearance */
@@ -196,7 +254,8 @@ footer {
 #nav_menu ul ul {
     display: none;
     position: absolute;
-    top: 100%;                /* appears under parent menu item */
+    top: 100%;
+    /* appears under parent menu item */
     left: 0;
     background-color: #2e552e;
     width: 100%;
@@ -210,7 +269,7 @@ footer {
 }
 
 /* Show dropdown on hover/tap */
-#nav_menu ul li:hover > ul {
+#nav_menu ul li:hover>ul {
     display: block;
 }
 
@@ -226,8 +285,10 @@ footer {
 /* Tablets & medium screens (max 740px) */
 @media only screen and (max-width: 740px) {
     #section1 {
-        flex-direction: column;    /* stack vertically */
-        align-items: center;       /* center items */
+        flex-direction: column;
+        /* stack vertically */
+        align-items: left;
+        /* center items */
         padding: 1em;
         gap: 1.5em;
     }
@@ -266,8 +327,8 @@ footer {
     }
 
     /* Tap or hover to reveal submenu */
-    #nav_menu ul li:focus-within > ul,
-    #nav_menu ul li:hover > ul {
+    #nav_menu ul li:focus-within>ul,
+    #nav_menu ul li:hover>ul {
         display: block;
     }
 
@@ -278,6 +339,42 @@ footer {
 
     #nav_menu ul ul li a {
         padding-left: 1em;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #main1 {
+        grid-template-columns: repeat(2, 180px);
+        grid-auto-rows: 150px;
+    }
+}
+
+/* Mobile phones – single column layout */
+@media only screen and (max-width: 565px) {
+    #main1 {
+        grid-template-columns: 1fr;
+        /* one full-width column */
+        grid-auto-rows: auto;
+        padding: 0;
+        gap: 15px;
+    }
+
+    .div1 img {
+        height: 200px;
+        /* fixed height for nicer display */
+        object-fit: cover;
+    }
+
+    .div1 figcaption {
+        color: white;
+    }
+}
+
+/* Extra small screens (360px and below) */
+@media only screen and (max-width: 360px) {
+    .div1 figcaption {
+        font-size: 0.85em;
+        color: white;
     }
 }
 
