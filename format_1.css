@@ -99,8 +99,6 @@ p.p1 {
 
 /*--------------------------------------
     GLOBAL IMAGE STYLES
-    Updated to fix images NOT appearing on phones.
-    Ensures images resize safely on smaller screens.
 --------------------------------------*/
 img {
     width: 100%;
@@ -129,7 +127,7 @@ img {
 }
 
 /*--------------------------------------
-    Grid 
+    Grid Container
 --------------------------------------*/
 /* Main grid container */
 #main1 {
@@ -389,7 +387,7 @@ footer {
     #img1,
     .image_fang,
     .image_gf1 {
-        width: 90%;
+        width: 80%;
         max-width: 250px;
     }
 
