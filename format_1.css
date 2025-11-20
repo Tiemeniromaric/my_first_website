@@ -136,7 +136,7 @@ img {
     display: grid;
 
     /* 3 columns on desktop */
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 350px);
 
     /* 2 rows of equal height (auto adjusts with content) */
     grid-auto-rows: 300px;
