@@ -136,10 +136,10 @@ img {
     display: grid;
 
     /* 3 columns on desktop */
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, 400px);
 
     /* 2 rows of equal height (auto adjusts with content) */
-    grid-auto-rows: 150px;
+    grid-auto-rows: 300px;
 
     gap: 20px;
     justify-content: center;
@@ -148,11 +148,11 @@ img {
 
 /* Each dish card */
 .div1 {
-    background-color: black;
-    color: rgb(2, 31, 11);
+    background-color: rgb(185, 128, 128);
+    color: black;
     text-align: center;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 0px;
 }
 
 /* Images inside each card */
@@ -167,7 +167,7 @@ img {
 /* Captions */
 .div1 figcaption {
     margin-top: 8px;
-    font-size: 0.95em;
+    font-size: 1em;
 }
 
 /*--------------------------------------
