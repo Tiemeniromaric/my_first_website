@@ -241,7 +241,7 @@ footer {
 /* Hover effect */
 #nav_menu ul li a:hover {
     background-color: #334812;
-    border-right: none;
+    /*border-right: none;*/
 }
 
 /* Remove right border for last menu item */
