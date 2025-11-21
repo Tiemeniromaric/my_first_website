@@ -168,3 +168,22 @@ body {
     .item5 { grid-row: 5; }
 }
 
+
+
+.image_fang,
+.image_gf1,
+img {
+    width: 100%;          /* relative width */
+    max-width: 400px;    /* maximum size */
+    height: auto;
+   /* display: block;
+    margin: 1em 0;
+    object-fit: cover;*/
+}
+/* Museum image */
+.museum {
+    width: 100%;
+    max-width: 400px;
+    height: 200px;
+    object-fit: cover;
+}
