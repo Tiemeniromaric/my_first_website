@@ -1,0 +1,19 @@
+Romaric Tchokouaha
+CIS 155
+Module 9
+November 21, 2025
+                                              Peer-response
+											  
+1.	Peer-review (suggestion) 1
+Space before link to ensure readability. There is a link on the culture page of your website where the words are barely readable because there is no space between them and the element before. Adding a space after the “the” before the link would help with this issue.
+
+2.	Peer-review  (suggestion)2
+One thing I noticed was that when I hover over certain nav bar elements, there is a white line that pops out to the right of the element.
+
+3.	Instructor feedback
+Add more images to make the page more attractive
+
+4.	What I did to improve my page according to the suggestions
+a.	I added a space as my peer suggested, to solve the issue
+b.	Or the second peer review, I went in the navigation menu css declaration, specifically under hover and set the right border to none.
+c.	I update the home page of my website, by using the grid feature to add more attractive images from Cameroon. I’m still working to come up with more images for the other pages. 

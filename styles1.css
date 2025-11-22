@@ -10,7 +10,7 @@ body {
     background-color: azure;
     width: 95%;
     padding: 0em 5em;
-    justify-content: center;
+    justify-content: left;
     font-family: "Elms Sans", sans-serif;
 }
 
@@ -22,7 +22,11 @@ a {
     transition: 0.3s ease;
 }
 
-a:visited { color: purple; }
+a:visited { color: greenyellow; }
+i{
+   font-size: 1.5em; 
+   color: orange;
+}
 
 .subtitle {
     font-weight: 800;
@@ -133,13 +137,13 @@ footer { color: hsl(258, 89%, 25%); }
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px;
+    padding: 15px;
     font-size: 1.2rem;
     line-height: 1.5;
     color: white;
     text-shadow: 0 0 8px rgba(0,0,0,0.7);
     overflow-y: auto;
-    min-height: 250px;
+    min-height: 450px;
     min-width: 350px;
 }
 
