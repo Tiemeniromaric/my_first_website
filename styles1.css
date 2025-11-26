@@ -28,6 +28,10 @@ i{
    font-size: 1.5em; 
    color: orange;
 }
+.fa-duotone fa-solid fa-volcano{
+    font-size: 1.5em; 
+   color: red;
+}
 section{
     width: 95%;
     margin: 30px 0;
