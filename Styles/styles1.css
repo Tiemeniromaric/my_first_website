@@ -33,7 +33,7 @@ i{
 section{
     width: 93%;                               /* Content width */
     margin: 30px 0;                           /* Vertical spacing */
-    padding: 0 0 0 45px;                          /* Internal spacing */
+    padding: 0 0 0 50px;                          /* Internal spacing */
     border: 2px solid black;                  /* Section border */
     background-color: #94bc7d;                /* Light green section background */
 }
