@@ -226,7 +226,7 @@ footer { color: hsl(258, 89%, 25%); }         /* Purple footer text color */
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Flexible image grid columns */
     grid-auto-rows: 300px;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
 }
 
